@@ -11,7 +11,7 @@ header {
 	box-sizing: border-box;
 	/* font-family: monospace; */
 	font-weight: bold;
-	font-size: large;
+	font-size: 13px;
 	position: relative;
 	z-index: 1;
 }
@@ -88,8 +88,8 @@ header ul {
 @keyframes toActive {
     from{
         top: 100%;
-        opacity: 0;
-    }
+        opacity: 0;   
+    }      
 }
 
 @keyframes toOut{
