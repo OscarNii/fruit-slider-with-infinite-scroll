@@ -130,21 +130,32 @@ header ul {
 	animation: toActive 0.8s ease-in-out 1;
 }
 
-@keyframes toActivePrev{
-	from{
+@keyframes toActivePrev {
+	from {
 		top: 0;
 		opacity: 0;
 	}
 }
 
-:root{
+:root {
 	--width-mockup: calc(371px / 1.5);
-	--width-height: calc(673px / 1.5);
+	--height-mockup: calc(673px / 1.5);
 }
 
-.mockup{
+.mockup {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	--left:0%;
+	--left: 0%;
+	transform: translate(-50%, -50%);
+	height: var(--height-mockup);
+	width: var(--width-mockup);
+	background: url(Imgs/mockup.png) 0 0 no-repeat,
+		url(Imgs/listSoda.jpg) var(--left) 0;
+	background-size: auto 100%;
+	background-blend-mode: multiply;
+	-webkit-mask-image: url(Imgs/mockup.png);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: auto 100%;
+	transition: background 0.5s;
 }
