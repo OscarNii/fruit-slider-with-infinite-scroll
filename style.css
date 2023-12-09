@@ -59,53 +59,80 @@ header ul {
 	pointer-events: none;
 }
 
-.item .content{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 10rem;
-    color: white;
-    font-weight: bold;
-    font-family: system-ui;
-    text-transform: uppercase;
-    white-space: nowrap;
+.item .content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	font-size: 10rem;
+	color: white;
+	font-weight: bold;
+	font-family: system-ui;
+	text-transform: uppercase;
+	white-space: nowrap;
 }
 .item {
-    display: block;
+	display: block;
 }
 
-.item.active{
-    display: block;
+.item.active {
+	display: block;
 }
 
-.item.hidden{
-    display: block;
-    pointer-events: none;
-    background-color: transparent;
-    z-index: 1;
+.item.hidden {
+	display: block;
+	pointer-events: none;
+	background-color: transparent;
+	z-index: 1;
 }
 @keyframes toActive {
-    from{
-        top: 100%;
-        opacity: 0;   
-    }      
+	from {
+		top: 100%;
+		opacity: 0;
+	}
 }
 
-@keyframes toOut{
-from{
-    top: 50%;
-    opacity: 1;
-}
-}
-
-.item.active img.fruit{
-    animation: toActive .5s ease-in-out 1;
+@keyframes toOut {
+	from {
+		top: 50%;
+		opacity: 1;
+	}
 }
 
-.item.hidden img.fruit{
-    animation: toOut .9s ease-in-out 1;
-    top: -100%;
-    opacity: 0;
+.item.active img.fruit {
+	animation: toActive 0.5s ease-in-out 1;
+}
+
+.item.hidden img.fruit {
+	animation: toOut 0.9s ease-in-out 1;
+	top: -100%;
+	opacity: 0;
+}
+
+.item.hidden .content {
+	animation: toActive 0.5s ease-in-out 1;
+}
+
+.item.hidden .content {
+	opacity: 0;
+}
+
+.carousel.right .item.active img.fruit {
+	animation: toActivePrev 0.5s ease-in-out 1;
+}
+.carousel.right .item.hidden img.fruit {
+	animation: toOut 0.8s ease-in-out 1;
+	top: 100%;
+	opacity: 0;
+}
+.carousel.right .item.active .content {
+	animation: toActive 0.8s ease-in-out 1;
+}
+
+@keyframes toActivePrev{
+	from{
+		top: 0;
+		opacity: 0;
+	}
 }
