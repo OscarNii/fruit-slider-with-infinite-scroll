@@ -87,15 +87,30 @@ header ul {
 	z-index: 1;
 }
 
-#prev, #next {
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-width: 50px;
-height: 50px;
-border-radius: 50%;
+#prev,
+#next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: transparent;
+	border: 1px solid #eeee;
+	background-color: #eee5;
+	color: #eee;
+	font-size: large;
+	font-family: monospace;
+	cursor: pointer;
+	z-index: 15;
 }
 
+#prev {
+	left: 20px;
+}
+#next {
+	right: 20px;
+}
 
 @keyframes toActive {
 	from {
